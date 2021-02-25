@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}CreateEvenement{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        {{ form_start(form) }}
+        <div class="row">
+            <div class="col-md-6">
+                {{ form_row(form.nom) }}
+                {{ form_row(form.type) }}
+                {{ form_row(form.ville) }}
+                {{ form_row(form.statutEvenement) }}
+            </div>
+            <div class="col-md-6">
+                {{ form_row(form.prix) }}
+                {{ form_row(form.dateDebut) }}
+                {{ form_row(form.dateFin) }}
+                {{ form_row(form.description) }}
+            </div>
+        </div>
+        <button>Enregistrer</button>
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CreateEvenement{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h6>nom</h6>
+                {{ evenement.id }}
+                {{ evenement.nom }}
+                {{ evenement.type }}
+                {{ evenement.ville }}
+                {{evenement.statutEvenement }}
+            </div>
+            <div class="col-md-6">
+                {{ evenement.prix }}
+                {{ evenement.dateDebut|date('Y-m-d') }}
+                {{ evenement.dateFin|date('Y-m-d') }}
+                {{ evenement.description }}
+            </div>
+        </div>
+        <button>Enregistrer</button>
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}
